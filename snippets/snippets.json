@@ -1,0 +1,170 @@
+{
+    "package":{
+        "prefix": "pack",
+        "body": [
+            "package ${1:PackageName};",
+            "\t${0}",
+            "endpackage: ${1}"
+        ],
+        "description": "Start a new package"
+    },
+    "interface":{
+        "prefix": "intr",
+        "body": [
+            "interface ${1:InterfaceName};",
+            "\t${0}",
+            "endinterface"
+        ],
+        "description": "Insert a new interface"
+    },
+    "method":{
+        "prefix": "method",
+        "body": [
+            "method ${1:MethodType} ${2:MethodName}();",
+            "\t${0}",
+            "endmethod: ${2}"
+        ],
+        "description": "Insert a method definition"
+    },
+    "method-norm":{
+        "prefix": "method",
+        "body": [
+            "method ${1:MethodType} ${2:MethodName}() = ${0};"
+        ],
+        "description": "Insert a new method"
+    },
+
+    "interface-with-parameter":{
+        "prefix": "intrp",
+        "body": [
+            "interface ${1:InterfaceName}#(${2:type} ${name});",
+            "\t${0}",
+            "endinterface"
+        ],
+        "description": "Insert a new interface with parameter"
+    },
+    "module":{
+        "prefix": "mod",
+        "body": [
+            "module ${1:mkModuleName}(${2:InterfaceName});",
+            "\t${0}",
+            "endmodule: ${1}"
+        ],
+        "description": "Insert a new module"
+    },
+    "rule":{
+        "prefix": "rule",
+        "body": [
+            "rule ${1:RuleName}(${2:Cond});",
+            "\t${0}",
+            "endrule: ${1}"
+        ],
+        "description": "Insert a new rule"
+    },
+    "mkAutoFSM":{
+        "prefix": "autofsm",
+        "body": [
+            "mkAutoFSM(seq",
+            "\t${0}",
+            "endseq);"
+        ],
+        "description": "Insert a new FSM using mkAutoFSM"
+    },
+    "mkAlwaysFSM":{
+        "prefix": "alwaysfsm",
+        "body": [
+            "mkAlwaysFSM(seq",
+            "\t${0}",
+            "endseq);"
+        ],
+        "description": "Insert a new FSM using mkAlwaysFSM"
+    },
+    "begin-end":{
+        "prefix": "begin",
+        "body": [
+            "begin",
+            "\t${0}",
+            "end"
+        ],
+        "description": "Insert a new begin...end block"
+    },
+    "typedef-enum":{
+        "prefix": "typedef-en",
+        "body": [
+            "typedef enum {",
+            "\t${0}",
+            "} ${1:EnumName} deriving(Eq, Bits);"
+        ],
+        "description": "Insert a typedef enumeration"
+    },
+    "typedef-struct":{
+        "prefix": "typedef-str",
+        "body": [
+            "typedef struct {",
+            "\t${0}",
+            "} ${1:StructName} deriving(Eq, Bits);"
+        ],
+        "description": "Insert a typedef structure"
+    },
+    "typedef-norm":{
+        "prefix": "typedef",
+        "body": [
+            "typedef ${0} ${1:TypeName};"
+        ],
+        "description": "Insert a type definition"
+    },
+    "case":{
+        "prefix": "case",
+        "body": [
+            "case(${1:CaseSearch})",
+            "\t${0}",
+            "endcase"
+        ],
+        "description": "Insert a case statment"
+    },
+    "case-matches":{
+        "prefix": "case-matches",
+        "body": [
+            "case(${1:CaseSearch}) matches",
+            "\ttagged ${0}",
+            "endcase"
+        ],
+        "description": "Insert a case-matches statment"
+    },
+    "action":{
+        "prefix": "action",
+        "body": [
+            "action",
+            "\t${0}",
+            "endaction"
+        ],
+        "description": "Insert an Action Block"
+    },
+    "actionvalue":{
+        "prefix": "actionvalue",
+        "body": [
+            "actionvalue",
+            "\t${0}",
+            "endactionvalue"
+        ],
+        "description": "Insert an ActionValue Block"
+    },
+    "function":{
+        "prefix": "function",
+        "body": [
+            "function ${1:function_type} ${2:function_name}();",
+            "\t${0}",
+            "endfunction: ${2}"
+        ],
+        "description": "Insert an function definition"
+    },
+    "import":{
+        "prefix": "import",
+        "body": [
+            "import ${1:package_name}::*;"
+        ],
+        "description": "Importing a package"
+    }
+
+
+}
