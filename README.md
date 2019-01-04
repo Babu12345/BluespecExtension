@@ -34,4 +34,4 @@ To install from the current directory use the command:
 ## Thanks
 * https://github.com/thotypous/sublime-bsv
 * https://github.com/aninhumer/SublimeBluespec
-* https://github.com/Raamakrishnan/bsv-for-vscode(Provided most of the initial code)
+* https://github.com/Raamakrishnan/bsv-for-vscode (Provided some of the initial code)
